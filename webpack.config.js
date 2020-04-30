@@ -3,8 +3,7 @@ const path = require("path")
 module.exports = {
     mode: "development",
     entry : {
-        client: "./src/client.js",
-        bundle: "./src/bundle.js"
+        client: path.resolve(__dirname, './src/components/client.js')
     },
     output : {
         path: path.resolve(__dirname, 'assets'),

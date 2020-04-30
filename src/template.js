@@ -3,20 +3,19 @@ export default function template (title, initialState ={}, content="") {
     if (content) {
          scripts = `
             <script> window.__STATE__ = ${JSON.stringify(initialState)} </script>
-            <script src="assets/client.js"> </script>
+            <script src="/assets/client.js"> </script>
             `   
     } else {
-        scripts = `<script src="assets/bundle.js"> </script>`
+        scripts = `<script src="/assets/bundle.js"> </script>`
     }
 
     let template = 
-    `
-        <!DOCTYPE html>
+        `<!DOCTYPE html>
         <html lang="en">
             <head>
                 <meta charset="utf-8">
                 <title> ${title} </title>
-                <link href="assets/style.css" rel="stylesheet">
+                <link href="/assets/style.css" rel="stylesheet">
             </head>
             <body>
                 <div classs="content">
@@ -26,7 +25,6 @@ export default function template (title, initialState ={}, content="") {
                 </div>
                 ${scripts}
             </body>
-        </html>
-    `
+        </html>`
     return template;
 }

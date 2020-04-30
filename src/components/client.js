@@ -1,8 +1,10 @@
 import React from 'react'
 import {hydrate} from 'react-dom'
 import {Provider} from 'react-redux'
-import configureStore from './redux/configureStore'
-import App from './components/app'
+import configureStore from '../redux/configureStore'
+
+import { BrowserRouter } from 'react-router-dom'
+import App from "./App"
 
 // Read the state sent with markup
 const state = window.__STATE__;
@@ -20,8 +22,10 @@ const store = configureStore(state)
  */
 
 hydrate(
-  <Provider store={store} >
-     <App />
-  </Provider>,
-  document.querySelector('#app')
+	<Provider store={store} >
+    	<BrowserRouter>
+        	<App />
+      	</BrowserRouter>
+  	</Provider>,
+  	document.querySelector('#app')
 )
