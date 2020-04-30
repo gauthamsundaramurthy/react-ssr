@@ -1,6 +1,6 @@
-# React Server-Side Rendering Example
+# React Server-Side Rendering with React Router
 
-Above is an example for React & Redux on Client and Server sides.
+This project is an example of using React & Redux & React Router with server side rendering technique.
 
 ## Development
 
@@ -9,11 +9,15 @@ Above is an example for React & Redux on Client and Server sides.
 ```bash
 $ git clone https://github.com/gauthamsundaramurthy/react-ssr.git
 ```
-
-- Go to the project directory and install dependencies:
+- Go to the project directory and checkout branch:
 
 ```bash
-$ cd react-ssr && yarn install
+$ git checkout react-ssr-routing
+```
+- Install dependencies
+
+```bash
+$ yarn install
 ```
 
 Launch the server:
@@ -22,8 +26,4 @@ Launch the server:
 $ yarn start
 ```
 
-Now, the application is running at [http://localhost:3000](http://localhost:3000).
-The homepage is Sever Rendered and ['/csr'](http://localhost:3000/client) is client side rendered.
-
-### Note
-This tutorial is to help you understand the concept behind server side rendering of a React application.
+Now, the application is running at [http://localhost:3000](http://localhost:3000)
